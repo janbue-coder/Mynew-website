@@ -1,0 +1,315 @@
+/* General Settings */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: white;
+}
+
+section {
+  padding: 70px 10%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  color: #1b5e20;
+}
+
+/* Navigation */
+
+header {
+  background-color: #1b5e20;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffc107;
+}
+
+/* Hero Section */
+
+.hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(0, 70, 20, 0.65), rgba(0, 70, 20, 0.65)),
+    url("https://images.unsplash.com/photo-1449157291145-7efd050a4d0e")
+      center/cover;
+}zz
+
+.hero-content {
+  color: white;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #ffc107;
+  color: #222;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #ffda5c;
+}
+
+/* About */
+
+#about {
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#about p {
+  margin-bottom: 15px;
+}
+
+/* Light Sections */
+
+.light-section {
+  background-color: #f1f8f3;
+}
+
+/* Service Cards */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 30px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  color: #1b5e20;
+  margin-bottom: 10px;
+}
+
+/* Events */
+
+.event-list {
+  max-width: 800px;
+  margin: auto;
+}
+
+.event {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 20px;
+  margin-bottom: 15px;
+  background-color: #f8f8f8;
+  border-left: 5px solid #1b5e20;
+}
+
+.date {
+  min-width: 70px;
+  text-align: center;
+  background-color: #1b5e20;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.date strong {
+  display: block;
+  font-size: 25px;
+}
+
+.date span {
+  font-size: 13px;
+}
+
+/* News */
+
+.news-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.news-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h3 {
+  color: #1b5e20;
+  margin-bottom: 15px;
+}
+
+.news-card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #1b5e20;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Contact */
+
+.contact-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+button {
+  padding: 14px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1b5e20;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2e7d32;
+}
+
+/* Footer */
+
+footer {
+  background-color: #123d16;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* Mobile Design */
+
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .news-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    padding: 50px 6%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .event {
+    align-items: flex-start;
+  }
+
+  nav {
+    gap: 10px;
+    font-size: 14px;
+  }
+}
