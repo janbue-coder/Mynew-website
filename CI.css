@@ -928,7 +928,7 @@ section {
 /* Program 3: Community Play */
 .card:nth-child(3)::before {
     background-image:
-        url("https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=90");
+        url("https://badmintonhouse.ca/cdn/shop/articles/where-to-play-badminton-truro-banner_dbb670fd-7a66-4d7c-ba70-4a4caaaf3de5.jpg?v=1789264592&width=1000");
     background-position: center;
 }
 
