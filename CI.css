@@ -1,0 +1,1051 @@
+
+/* ==========================================
+   CASATE BADMINTON COMMUNITY
+   Modern Sports Website Design
+========================================== */
+
+/* 1. GLOBAL STYLES */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #116530;
+    --primary-dark: #073b24;
+    --primary-light: #eaf6ed;
+    --accent: #d9ff43;
+    --accent-hover: #c7ed28;
+    --text: #202b24;
+    --muted: #68756c;
+    --white: #ffffff;
+    --background: #f7faf7;
+    --border: #e2eae3;
+    --shadow: 0 12px 35px rgba(7, 59, 36, 0.09);
+    --radius: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.75;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 100px 8%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.3;
+}
+
+h2 {
+    text-align: center;
+    color: var(--primary-dark);
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 800;
+    margin-bottom: 45px;
+    letter-spacing: -1px;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 5px;
+    margin: 16px auto 0;
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+p {
+    margin-bottom: 14px;
+}
+
+a {
+    transition: all 0.3s ease;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--primary-dark);
+}
+
+/* ==========================================
+   2. NAVIGATION
+========================================== */
+
+header {
+    width: 100%;
+    min-height: 82px;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background: rgba(7, 59, 36, 0.98);
+    color: var(--white);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    color: #edf7ef;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   3. HERO / HOME SECTION
+========================================== */
+
+.hero {
+    min-height: 650px;
+    padding: 110px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    position: relative;
+    isolation: isolate;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(4, 40, 23, 0.88),
+            rgba(17, 101, 48, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 900px;
+    color: var(--white);
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5.5vw, 66px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    color: #e6f0e8;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* ==========================================
+   4. BUTTONS
+========================================== */
+
+.button {
+    display: inline-block;
+    padding: 15px 28px;
+    margin: 5px;
+
+    background: var(--accent);
+    color: var(--primary-dark);
+
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ==========================================
+   5. ABOUT SECTION
+========================================== */
+
+#about {
+    max-width: 1250px;
+    margin: auto;
+    text-align: center;
+}
+
+#about p {
+    max-width: 900px;
+    margin: 0 auto 20px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.95;
+}
+
+#about p:last-child {
+    margin-bottom: 0;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ==========================================
+   6. LIGHT SECTIONS
+========================================== */
+
+.light-section {
+    background: var(--background);
+}
+
+/* ==========================================
+   7. PROGRAMS AND SERVICES CARDS
+========================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card {
+    padding: 35px 24px;
+    background: var(--white);
+    text-align: center;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    border-bottom: 4px solid var(--accent);
+
+    box-shadow: 0 5px 20px rgba(7, 59, 36, 0.04);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+    border-bottom-color: var(--primary);
+}
+
+.icon {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary-light);
+    border-radius: 22px;
+    font-size: 38px;
+
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+.card:hover .icon {
+    background: #efffc1;
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.card h3 {
+    color: var(--primary-dark);
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 14px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.85;
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   8. EVENTS SECTION
+========================================== */
+
+.event-list {
+    max-width: 900px;
+    margin: auto;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 25px;
+    margin-bottom: 20px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--primary);
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(7, 59, 36, 0.04);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.event:hover {
+    transform: translateX(7px);
+    box-shadow: var(--shadow);
+}
+
+.event h3 {
+    color: var(--primary-dark);
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.event p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+/* Event Date */
+
+.date {
+    min-width: 82px;
+    padding: 14px 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--primary-dark);
+    color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.date strong {
+    display: block;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.date span {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Sample Event Note */
+
+#events > p {
+    max-width: 900px;
+    margin: 25px auto 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ==========================================
+   9. NEWS AND ANNOUNCEMENTS
+========================================== */
+
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.news-card {
+    padding: 30px;
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    border-top: 5px solid var(--primary);
+
+    box-shadow: 0 5px 20px rgba(7, 59, 36, 0.04);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.news-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+.news-card h3 {
+    color: var(--primary-dark);
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.news-card p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.news-card a {
+    margin-top: auto;
+    padding-top: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.news-card a:hover {
+    color: #8b6500;
+    transform: translateX(4px);
+}
+
+/* ==========================================
+   10. CONTACT SECTION
+========================================== */
+
+#contact {
+    background: var(--white);
+    text-align: center;
+}
+
+#contact > p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+    color: var(--muted);
+}
+
+/* Contact Details */
+
+.contact-info {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    padding: 25px;
+
+    background: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.contact-info p:last-child {
+    margin-bottom: 0;
+}
+
+/* Contact Form */
+
+form {
+    max-width: 650px;
+    margin: auto;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 16px 18px;
+
+    background: #fbfdfb;
+    color: var(--text);
+
+    border: 1px solid #dce5dd;
+    border-radius: 9px;
+
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                background 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #89958c;
+}
+
+input:focus,
+textarea:focus {
+    background: var(--white);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(17, 101, 48, 0.08);
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Send Message Button */
+
+button {
+    width: 100%;
+    padding: 16px;
+
+    background: var(--primary);
+    color: var(--white);
+
+    border: 2px solid var(--primary);
+    border-radius: 9px;
+
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   11. FOOTER
+========================================== */
+
+footer {
+    padding: 35px 8%;
+    background: var(--primary-dark);
+    color: var(--white);
+    text-align: center;
+    border-top: 4px solid var(--accent);
+}
+
+footer p {
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+footer p:last-child {
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================
+   12. TABLET RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 1100px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .news-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    section {
+        padding: 80px 6%;
+    }
+}
+
+/* ==========================================
+   13. MOBILE RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 650px) {
+    html {
+        scroll-padding-top: 145px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    header {
+        padding: 16px 5%;
+        gap: 14px;
+    }
+
+    .logo {
+        font-size: 19px;
+        text-align: center;
+        white-space: normal;
+    }
+
+    nav {
+        gap: 10px 16px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 540px;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 9vw, 45px);
+        letter-spacing: -1px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .button {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-bottom: 32px;
+    }
+
+    #about p {
+        font-size: 15px;
+    }
+
+    .cards,
+    .news-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 30px 24px;
+    }
+
+    .event {
+        align-items: center;
+        gap: 15px;
+        padding: 17px;
+    }
+
+    .date {
+        min-width: 65px;
+        padding: 11px 8px;
+    }
+
+    .date strong {
+        font-size: 25px;
+    }
+
+    .event h3 {
+        font-size: 16px;
+    }
+
+    .event p {
+        font-size: 12px;
+    }
+
+    .news-card {
+        padding: 25px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    input,
+    textarea {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .contact-info {
+        padding: 20px 12px;
+    }
+
+    .contact-info p {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    footer {
+        padding: 28px 6%;
+    }
+}
+
+/* ==========================================
+   14. SMALL PHONE SCREENS
+========================================== */
+
+@media (max-width: 380px) {
+    .logo {
+        font-size: 17px;
+    }
+
+    nav {
+        gap: 9px 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .button {
+        padding: 11px 14px;
+    }
+
+    .event {
+        gap: 10px;
+        padding: 13px;
+    }
+
+    .date {
+        min-width: 55px;
+    }
+
+    .event h3 {
+        font-size: 14px;
+    }
+}
+
+/* ==========================================
+   15. ACCESSIBILITY
+========================================== */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #a5d6a7;
+    outline-offset: 3px;
+}
+
+/* Respect reduced-motion preferences */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+
+/* ==========================================
+   CASATE BADMINTON COMMUNITY
+   BADMINTON PHOTOS + SECTION BACKGROUNDS
+========================================== */
+
+/* GENERAL SECTION BACKGROUNDS */
+
+section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* HOME: Full-width badminton court background */
+#home.hero {
+    background-image:
+        linear-gradient(
+            110deg,
+            rgba(2, 39, 24, 0.88),
+            rgba(4, 65, 42, 0.48)
+        ),
+        url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1920&q=90");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ABOUT: Badminton player and court */
+#about {
+    max-width: none;
+    background-image:
+        linear-gradient(
+            rgba(239, 250, 241, 0.91),
+            rgba(239, 250, 241, 0.91)
+        ),
+        url("https://www.lboro.ac.uk/media/media/sport/images/sports/badminton/perf-card.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ==========================================
+   PROGRAMS: BADMINTON PHOTO CARDS
+========================================== */
+
+#services {
+    background-image:
+        linear-gradient(
+            rgba(235, 248, 238, 0.94),
+            rgba(235, 248, 238, 0.94)
+        ),
+        url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+.cards {
+    align-items: stretch;
+}
+
+.card {
+    padding: 0 24px 30px;
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(7, 59, 36, 0.10);
+}
+
+/* Photo area at the top of each program card */
+.card::before {
+    content: "";
+    display: block;
+    height: 190px;
+    margin: 0 -24px 22px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 17px 17px 0 0;
+}
+
+/* Program 1: Badminton Training */
+.card:nth-child(1)::before {
+    background-image:
+        url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=90");
+    background-position: center;
+}
+
+/* Program 2: Tournaments */
+.card:nth-child(2)::before {
+    background-image:
+        url("https://www.lboro.ac.uk/media/media/sport/images/sports/badminton/perf-card.jpg");
+    background-position: center;
+}
+
+/* Program 3: Community Play */
+.card:nth-child(3)::before {
+    background-image:
+        url("https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=90");
+    background-position: center;
+}
+
+/* Program 4: Fitness and Wellness */
+.card:nth-child(4)::before {
+    background-image:
+        url("https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=90");
+    background-position: center;
+}
+
+/* Existing icons */
+.card .icon {
+    margin-top: 0;
+}
+
+/* Program card hover effect */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(7, 59, 36, 0.16);
+}
+
+/* ==========================================
+   EVENTS: BADMINTON COURT BACKGROUND
+========================================== */
+
+#events {
+    background-image:
+        linear-gradient(
+            rgba(3, 48, 32, 0.83),
+            rgba(3, 48, 32, 0.83)
+        ),
+        url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1600&q=90");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+#events h2,
+#events > p {
+    color: #ffffff;
+}
+
+#events .event {
+    background: rgba(255, 255, 255, 0.97);
+    color: #202b24;
+}
+
+/* ==========================================
+   NEWS: SPORTS PHOTO BACKGROUND
+========================================== */
+
+#news.light-section {
+    background-image:
+        linear-gradient(
+            rgba(239, 249, 241, 0.94),
+            rgba(239, 249, 241, 0.94)
+        ),
+        url("https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+#news .news-card {
+    background: rgba(255, 255, 255, 0.97);
+    overflow: hidden;
+}
+
+/* ==========================================
+   CONTACT: BADMINTON COURT BACKGROUND
+========================================== */
+
+#contact {
+    background-image:
+        linear-gradient(
+            rgba(232, 246, 235, 0.93),
+            rgba(232, 246, 235, 0.93)
+        ),
+        url("https://images.unsplash.com/photo-1622279457486-62dcc4a431d6?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+}
+
+#contact .contact-info,
+#contact form {
+    background: rgba(255, 255, 255, 0.97);
+}
+
+/* ==========================================
+   FOOTER: DARK SPORTS THEME
+========================================== */
+
+footer {
+    background:
+        linear-gradient(
+            rgba(3, 45, 29, 0.94),
+            rgba(3, 45, 29, 0.94)
+        ),
+        url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=1600&q=85")
+        center / cover no-repeat;
+    border-top: 4px solid #d9ff43;
+}
+
+/* ==========================================
+   RESPONSIVE PHOTOS
+========================================== */
+
+@media (max-width: 650px) {
+    #about,
+    #services,
+    #events,
+    #news,
+    #contact,
+    footer {
+        background-attachment: scroll;
+    }
+
+    .card::before {
+        height: 200px;
+    }
+}
