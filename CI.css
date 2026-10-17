@@ -908,7 +908,7 @@ section {
 /* Program 1: Badminton Training */
 .card:nth-child(1)::before {
     background-image:
-        url("https://images.openai.com/static-rsc-4/?purpose=fullsize");
+        url("https://images.openai.com/static-rsc-4/4o8UPd-OWujOY4ECyLYobKMgiGlrbfBdejPx2o0r-oiEd63I91ga0XrLvLSwG4529FOc75EsUG9jAPI2b7Ct5v5OMvyYGe1hyNsO-RkadIFLPNeBRLB5CYFX_ETsucA5fyiJ151XKHorbx_M2aSaP8SOiFSLhck2o0D4gjci8ixDG8HFQOfuh23UWwVHO2Y2?purpose=fullsize");
     background-position: center;
 }
 
