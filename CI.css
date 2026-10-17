@@ -1,10 +1,4 @@
 
-/* ==========================================
-   CASATE BADMINTON COMMUNITY
-   Modern Sports Website Design
-========================================== */
-
-/* 1. GLOBAL STYLES */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap');
 
@@ -914,7 +908,7 @@ section {
 /* Program 1: Badminton Training */
 .card:nth-child(1)::before {
     background-image:
-        url("https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=90");
+        url("https://images.openai.com/static-rsc-4/?purpose=fullsize");
     background-position: center;
 }
 
